@@ -26,4 +26,59 @@
             <h1 id="blue-count">0</h1>
             <div class="buttons">
                 <button onclick="increment('blue', 1)">+1</button>
-               
+                <button onclick="increment('blue', 3)">+3</button>
+                <button onclick="increment('blue', 5)">+5</button>
+                <button onclick="increment('blue', 6)">+6</button>
+                <button onclick="increment('blue', 10)">+10</button>
+            </div>
+            <div class="manual-input">
+                <input type="number" id="blue-input" placeholder="Set blue counter">
+                <button onclick="setCounter('blue')">Set</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event Scores Table -->
+    <div class="scores-table">
+        <table>
+            <tr>
+                <th>Event</th>
+                <th>Red Score</th>
+                <th>Blue Score</th>
+            </tr>
+            <tr>
+                <td>Wrestling</td>
+                <td><input type="number" id="red-wrestling" oninput="updateTotal('red')"></td>
+                <td><input type="number" id="blue-wrestling" oninput="updateTotal('blue')"></td>
+            </tr>
+            <tr>
+                <td>Horse Racing</td>
+                <td><input type="number" id="red-horse-racing" oninput="updateTotal('red')"></td>
+                <td><input type="number" id="blue-horse-racing" oninput="updateTotal('blue')"></td>
+            </tr>
+            <tr>
+                <td>Battle Royale</td>
+                <td><input type="number" id="red-battle-royale" oninput="updateTotal('red')"></td>
+                <td><input type="number" id="blue-battle-royale" oninput="updateTotal('blue')"></td>
+            </tr>
+            <tr>
+                <td>Chariot Racing</td>
+                <td><input type="number" id="red-chariot-racing" oninput="updateTotal('red')"></td>
+                <td><input type="number" id="blue-chariot-racing" oninput="updateTotal('blue')"></td>
+            </tr>
+            <tr>
+                <td>Archer Deathmatch</td>
+                <td><input type="number" id="red-archer-deathmatch" oninput="updateTotal('red')"></td>
+                <td><input type="number" id="blue-archer-deathmatch" oninput="updateTotal('blue')"></td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <th id="red-total">0</th>
+                <th id="blue-total">0</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
