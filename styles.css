@@ -73,4 +73,93 @@ h1 {
     font-size: 1.2em;
     margin-right: 10px;
     border-radius: 5px;
+    border: 2px solid #555;
+    background-color: #444;
+    color: #fff;
+}
+
+.manual-input button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.red-counter .manual-input button {
+    background-color: #ff4c4c;
+}
+
+.red-counter .manual-input button:hover {
+    background-color: #cc3c3c;
+}
+
+.blue-counter .manual-input button {
+    background-color: #4c4cff;
+}
+
+.blue-counter .manual-input button:hover {
+    background-color: #3c3ccc;
+}
+
+/* Styles for the scores table */
+.scores-table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+th {
+    background-color: #555;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+td input {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 2px solid #555;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+}
+
+.red-event-score {
+    background-color: #ff4c4c;
+    color: #fff;
+}
+
+.blue-event-score {
+    background-color: #4c4cff;
+    color: #fff;
+}
+
+th#red-total {
+    background-color: #ff4c4c;
+}
+
+th#blue-total {
+    background-color: #4c4cff;
+}
+
+td {
+    color: #fff;
 }
