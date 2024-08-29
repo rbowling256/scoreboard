@@ -5,6 +5,21 @@ let blueCount = localStorage.getItem('blueCount') ? parseInt(localStorage.getIte
 document.getElementById('red-count').innerText = redCount;
 document.getElementById('blue-count').innerText = blueCount;
 
+// Initialize event scores from localStorage or set to 0 if not present
+const events = ['wrestling', 'horse-racing', 'battle-royale', 'chariot-racing', 'archer-deathmatch'];
+
+events.forEach(event => {
+    const redEventScore = localStorage.getItem(`red-${event}`) ? parseInt(localStorage.getItem(`red-${event}`)) : 0;
+    const blueEventScore = localStorage.getItem(`blue-${event}`) ? parseInt(localStorage.getItem(`blue-${event}`)) : 0;
+
+    document.getElementById(`red-${event}`).value = redEventScore;
+    document.getElementById(`blue-${event}`).value = blueEventScore;
+});
+
+// Update total scores on page load
+updateTotal('red');
+updateTotal('blue');
+
 // Increment function
 function increment(color, value) {
     if (color === 'red') {
@@ -35,21 +50,14 @@ function setCounter(color) {
     }
 }
 
-// Function to update total score
+// Function to update total score and persist event scores
 function updateTotal(color) {
     let total = 0;
-
-    const events = [
-        'wrestling',
-        'horse-racing',
-        'battle-royale',
-        'chariot-racing',
-        'archer-deathmatch'
-    ];
 
     events.forEach(event => {
         const score = parseInt(document.getElementById(`${color}-${event}`).value) || 0;
         total += score;
+        localStorage.setItem(`${color}-${event}`, score);
     });
 
     document.getElementById(`${color}-total`).innerText = total;
