@@ -1,17 +1,19 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #333;
     color: #fff;
+    padding: 20px;
 }
 
 .counter-container {
     display: flex;
     gap: 100px;
+    margin-bottom: 40px;
 }
 
 .counter {
@@ -100,4 +102,42 @@ h1 {
 
 .blue-counter .manual-input button:hover {
     background-color: #3c3ccc;
+}
+
+/* Styles for the scores table */
+.scores-table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+th {
+    background-color: #555;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+td input {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 2px solid #555;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
 }
