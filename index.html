@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="counter-container">
+        <div class="counter red-counter">
+            <h1 id="red-count">0</h1>
+            <div class="buttons">
+                <button onclick="increment('red', 1)">+1</button>
+                <button onclick="increment('red', 3)">+3</button>
+                <button onclick="increment('red', 5)">+5</button>
+                <button onclick="increment('red', 10)">+10</button>
+            </div>
+        </div>
+        <div class="counter blue-counter">
+            <h1 id="blue-count">0</h1>
+            <div class="buttons">
+                <button onclick="increment('blue', 1)">+1</button>
+                <button onclick="increment('blue', 3)">+3</button>
+                <button onclick="increment('blue', 5)">+5</button>
+                <button onclick="increment('blue', 10)">+10</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
