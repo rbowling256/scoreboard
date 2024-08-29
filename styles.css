@@ -1,42 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+.manual-input {
+    margin-top: 20px;
 }
 
-.counter-container {
-    display: flex;
-    gap: 50px;
+.manual-input input {
+    padding: 5px;
+    font-size: 1em;
+    margin-right: 10px;
 }
 
-.counter {
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.red-counter {
-    border: 2px solid #ff4c4c;
-}
-
-.blue-counter {
-    border: 2px solid #4c4cff;
-}
-
-h1 {
-    font-size: 3em;
-    margin: 0 0 20px 0;
-}
-
-.buttons button {
-    margin: 5px;
-    padding: 10px 20px;
+.manual-input button {
+    padding: 5px 10px;
     font-size: 1em;
     cursor: pointer;
     border: none;
@@ -44,10 +17,10 @@ h1 {
     color: #fff;
 }
 
-.red-counter button {
+.red-counter .manual-input button {
     background-color: #ff4c4c;
 }
 
-.blue-counter button {
+.blue-counter .manual-input button {
     background-color: #4c4cff;
 }
