@@ -42,39 +42,37 @@
     <div class="scores-table">
         <table>
             <tr>
-                <th>Event</th>
-                <th>Red Score</th>
-                <th>Blue Score</th>
+                <th colspan="3">Event Scores</th>
             </tr>
             <tr>
+                <td class="red-event-score"><input type="number" id="red-wrestling" oninput="updateTotal('red')"></td>
                 <td>Wrestling</td>
-                <td><input type="number" id="red-wrestling" oninput="updateTotal('red')"></td>
-                <td><input type="number" id="blue-wrestling" oninput="updateTotal('blue')"></td>
+                <td class="blue-event-score"><input type="number" id="blue-wrestling" oninput="updateTotal('blue')"></td>
             </tr>
             <tr>
+                <td class="red-event-score"><input type="number" id="red-horse-racing" oninput="updateTotal('red')"></td>
                 <td>Horse Racing</td>
-                <td><input type="number" id="red-horse-racing" oninput="updateTotal('red')"></td>
-                <td><input type="number" id="blue-horse-racing" oninput="updateTotal('blue')"></td>
+                <td class="blue-event-score"><input type="number" id="blue-horse-racing" oninput="updateTotal('blue')"></td>
             </tr>
             <tr>
+                <td class="red-event-score"><input type="number" id="red-battle-royale" oninput="updateTotal('red')"></td>
                 <td>Battle Royale</td>
-                <td><input type="number" id="red-battle-royale" oninput="updateTotal('red')"></td>
-                <td><input type="number" id="blue-battle-royale" oninput="updateTotal('blue')"></td>
+                <td class="blue-event-score"><input type="number" id="blue-battle-royale" oninput="updateTotal('blue')"></td>
             </tr>
             <tr>
+                <td class="red-event-score"><input type="number" id="red-chariot-racing" oninput="updateTotal('red')"></td>
                 <td>Chariot Racing</td>
-                <td><input type="number" id="red-chariot-racing" oninput="updateTotal('red')"></td>
-                <td><input type="number" id="blue-chariot-racing" oninput="updateTotal('blue')"></td>
+                <td class="blue-event-score"><input type="number" id="blue-chariot-racing" oninput="updateTotal('blue')"></td>
             </tr>
             <tr>
+                <td class="red-event-score"><input type="number" id="red-archer-deathmatch" oninput="updateTotal('red')"></td>
                 <td>Archer Deathmatch</td>
-                <td><input type="number" id="red-archer-deathmatch" oninput="updateTotal('red')"></td>
-                <td><input type="number" id="blue-archer-deathmatch" oninput="updateTotal('blue')"></td>
+                <td class="blue-event-score"><input type="number" id="blue-archer-deathmatch" oninput="updateTotal('blue')"></td>
             </tr>
             <tr>
+                <th id="red-total" class="red-event-score">0</th>
                 <th>Total</th>
-                <th id="red-total">0</th>
-                <th id="blue-total">0</th>
+                <th id="blue-total" class="blue-event-score">0</th>
             </tr>
         </table>
     </div>
