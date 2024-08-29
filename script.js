@@ -34,3 +34,23 @@ function setCounter(color) {
         }
     }
 }
+
+// Function to update total score
+function updateTotal(color) {
+    let total = 0;
+
+    const events = [
+        'wrestling',
+        'horse-racing',
+        'battle-royale',
+        'chariot-racing',
+        'archer-deathmatch'
+    ];
+
+    events.forEach(event => {
+        const score = parseInt(document.getElementById(`${color}-${event}`).value) || 0;
+        total += score;
+    });
+
+    document.getElementById(`${color}-total`).innerText = total;
+}
