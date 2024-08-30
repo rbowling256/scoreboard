@@ -97,15 +97,14 @@ th, td {
 th {
     background-color: #555;
     color: #fff;
-    border-radius: 10px 10px 0 0;
 }
 
-td.red-event-score {
+.red-event-score {
     background-color: #ff4c4c;
     color: #fff;
 }
 
-td.blue-event-score {
+.blue-event-score {
     background-color: #4c4cff;
     color: #fff;
 }
