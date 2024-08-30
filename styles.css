@@ -92,10 +92,11 @@ th, td {
     text-align: center;
     font-size: 1.2em;
     border: 1px solid #555;
+    font-weight: bold;
 }
 
 th {
-    background-color: #555;
+    background-color: #222;
     color: #fff;
 }
 
