@@ -5,9 +5,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #333;
     color: #fff;
     padding: 20px;
-    transition: background-color 0.3s ease;
 }
 
 h1 {
@@ -15,6 +15,69 @@ h1 {
     margin-bottom: 20px;
 }
 
+.event-counters {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.event-counter {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.counter {
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #222;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.red-counter {
+    border: 3px solid #ff4c4c;
+}
+
+.blue-counter {
+    border: 3px solid #4c4cff;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.red-counter button {
+    background-color: #ff4c4c;
+}
+
+.red-counter button:hover {
+    background-color: #cc3c3c;
+}
+
+.blue-counter button {
+    background-color: #4c4cff;
+}
+
+.blue-counter button:hover {
+    background-color: #3c3ccc;
+}
+
+/* Styles for the event scores table */
 table {
     width: 60%;
     border-collapse: collapse;
