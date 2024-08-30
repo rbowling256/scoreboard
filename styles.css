@@ -90,7 +90,7 @@ table {
 th, td {
     padding: 15px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
     border: 1px solid #555;
     font-weight: bold;
 }
@@ -98,6 +98,7 @@ th, td {
 th {
     background-color: #222;
     color: #fff;
+    font-size: 2em;
 }
 
 .red-event-score {
