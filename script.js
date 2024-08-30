@@ -10,6 +10,14 @@ events.forEach(event => {
     const redEventScore = localStorage.getItem(`red-${event}`) ? parseInt(localStorage.getItem(`red-${event}`)) : 0;
     const blueEventScore = localStorage.getItem(`blue-${event}`) ? parseInt(localStorage.getItem(`blue-${event}`)) : 0;
 
+    // Update counters on the main page
+    if (document.getElementById(`red-${event}-count`)) {
+        document.getElementById(`red-${event}-count`).innerText = redEventScore;
+    }
+    if (document.getElementById(`blue-${event}-count`)) {
+        document.getElementById(`blue-${event}-count`).innerText = blueEventScore;
+    }
+
     // Update scores on the event scores page
     if (document.getElementById(`red-${event}-score`)) {
         document.getElementById(`red-${event}-score`).innerText = redEventScore;
@@ -17,7 +25,7 @@ events.forEach(event => {
     if (document.getElementById(`blue-${event}-score`)) {
         document.getElementById(`blue-${event}-score`).innerText = blueEventScore;
     }
-
+	
     // Calculate total points
     redTotalPoints += redEventScore;
     blueTotalPoints += blueEventScore;
@@ -29,6 +37,27 @@ events.forEach(event => {
         blueEventsLeading++;
     }
 });
+
+// Function to increment event counters
+function incrementEvent(event, value) {
+    const currentCount = parseInt(localStorage.getItem(event)) || 0;
+    const newCount = currentCount + value;
+
+    localStorage.setItem(event, newCount);
+    document.getElementById(`${event}-count`).innerText = newCount;
+}
+
+// Function to manually set the score
+function setEventScore(event) {
+    const inputField = document.getElementById(`${event}-set`);
+    const newScore = parseInt(inputField.value);
+
+    if (!isNaN(newScore)) {
+        localStorage.setItem(event, newScore);
+        document.getElementById(`${event}-count`).innerText = newScore;
+        inputField.value = ''; // Clear the input field after setting the score
+    }
+}
 
 // Display the total points and events leading
 document.getElementById('red-total-points').innerText = redTotalPoints;
