@@ -66,10 +66,26 @@ document.getElementById('red-events-leading').innerText = redEventsLeading;
 document.getElementById('blue-events-leading').innerText = blueEventsLeading;
 
 // Change background color based on the team leading in total points
-if (redTotalPoints > blueTotalPoints) {
+
+const totalPoints = redTotalPoints + blueTotalPoints;
+let redPercentage = 50;
+let bluePercentage = 50;
+
+if (totalPoints > 0) {
+    redPercentage = (redTotalPoints / totalPoints) * 100;
+    bluePercentage = (blueTotalPoints / totalPoints) * 100;
+}
+
+// Set background gradient based on percentage of total points
+document.body.style.background = `linear-gradient(to right, #ff4c4c ${redPercentage}%, #4c4cff ${redPercentage}%)`;
+
+
+/* if (redTotalPoints > blueTotalPoints) {
     document.body.style.backgroundColor = '#ff4c4c';
 } else if (blueTotalPoints > redTotalPoints) {
     document.body.style.backgroundColor = '#4c4cff';
 } else {
     document.body.style.backgroundColor = '#444'; // Neutral color if tied
-}
+} */
+
+
